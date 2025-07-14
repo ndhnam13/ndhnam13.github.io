@@ -4,21 +4,21 @@ description: "An employee's workstation began acting suspiciously; strange files
 author: ngname
 date: 2025-07-14 16:18 +0700
 categories: [CTF, Forensics]
-tags: [windows, memory forensics, network forensics, disk forensics, malware, mimikatz]
-img_path: /assets/img/L3AKCTF-Breadcrumbs
-image: L3ak_CTF_2025_Logo.png
+tags: [windows, memory forensics, network forensics, disk forensics, malware analysis]
 pin: true
 ---
 
+# Mô tả
+
 ## Link tải
 
-https://drive.google.com/file/d/1Y12mpv1OhHsS_skVoDomRkDvR0KWSfnJ/view
+[Chính](https://drive.google.com/file/d/1Y12mpv1OhHsS_skVoDomRkDvR0KWSfnJ/view)
 
-https://drive.google.com/file/d/1CwHq6AYXNmojx0H1-UzGKbDRJCZaGxiY/edit
+[Phụ](https://drive.google.com/file/d/1CwHq6AYXNmojx0H1-UzGKbDRJCZaGxiY/edit)
 
 **Bài cho ta 3 file và phân làm 3 giai đoạn (3 flag) file dmp, pcap và cuối cùng là ad1**
 
-Bài này do chưa phân tích kỹ nội dung của protocol TLS trong pcap nên không biết rằng phương thức mã hoá mà client-server sử dụng không an toàn => Bị kẹt và không giải được bài
+*Bài này do chưa phân tích kỹ nội dung của protocol TLS trong pcap nên không biết rằng phương thức mã hoá mà client-server sử dụng không an toàn => Bị kẹt và không giải được bài*
 
 ## Giai đoạn 1: Memdump forensics
 
@@ -471,7 +471,7 @@ p = 1000000000000000000000000000000000000000000000000000000000000000000000000000
 q = 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000513
 ```
 
-Để tính key từ p và q ta có thể dùng [rsatool.py]()
+Để tính key từ p và q ta có thể dùng [rsatool.py](https://github.com/ius/rsatool)
 
 ```powershell
 PS C:\Users\admin\Desktop\1> python -m rsatool -p 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000153 -q 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000513 -o key.pem
