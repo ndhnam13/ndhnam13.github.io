@@ -6,7 +6,7 @@ date: 2025-07-14 16:18 +0700
 categories: [CTF, Forensics]
 tags: [windows, memory forensics, network forensics, disk forensics, malware, mimikatz]
 img_path: /assets/img/L3AKCTF-Breadcrumbs
-image: ./L3ak_CTF_2025_Logo.png
+image: L3ak_CTF_2025_Logo.png
 pin: true
 ---
 
